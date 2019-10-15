@@ -5242,7 +5242,7 @@ function processSessionIdDisk(session, headerCb, packetCb, endCb, limit) {
       case null:
         let msg = util.format(session._id, "in file", pcap.filename, "couldn't read packet at", pos, "packet #", i, "of", fields.packetPos.length);
         console.log("ERROR - processSessionIdDisk -", msg);
-        endCb(msg, null);
+        nextCb(null);
         break;
       case undefined:
         break;
